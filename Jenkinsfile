@@ -20,7 +20,7 @@ pipeline {
       }   
     }
     
-      stage('Unit Tests') {
+      stage('Generate Allure Reports') {
       steps {
        allure ([results: [[path:' target/allure-results']] ])
  
