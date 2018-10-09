@@ -16,7 +16,7 @@ pipeline {
         slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         //Build
         
-    sh 'mvn clean test -Dgrid.connection.url=http://172.23.44.110:30012/wd/hub -Dgrid.browser.name=chrome -Dgrid.browser.version=69.0'
+    sh 'mvn clean site'
       }   
     }
     
